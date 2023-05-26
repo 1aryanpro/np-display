@@ -50,6 +50,6 @@ function draw() {
 
   image(textAd, (width - TW2) / 2, CH, TW2, TH2);
 
-  origin -= width/550;
+  origin -= width/700;
   if (origin < -CW) origin += CW;
 }
