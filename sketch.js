@@ -24,14 +24,14 @@ function setup() {
     FH = flyer.height * (width / flyer.width);
   }
 
-  CH = FH * 3 / 4;
-  CW = carousel.width * (CH / carousel.height);
-
   TH1 = height - FH;
   TW1 = textAd.width * (TH1 / textAd.height);
 
-  TH2 = height - CH;
+  TH2 = height * 0.3;
   TW2 = textAd.width * (TH2 / textAd.height);
+
+  CH = height - TH2;
+  CW = carousel.width * (CH / carousel.height);
 }
 
 function draw() {
@@ -49,7 +49,7 @@ function draw() {
   image(carousel, origin, 20, CW, CH);
   image(carousel, origin + CW, 20, CW, CH);
 
-  image(textAd, (width - TW2) / 2, CH, TW2, TH2);
+  image(textAd, (width - TW2) / 2, height - TH2, TW2, TH2);
 
   origin -= width/700 * deltaTime/10;
   if (origin < -CW) origin += CW;
