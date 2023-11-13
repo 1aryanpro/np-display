@@ -41,8 +41,8 @@ function draw() {
 
   if (timer <= 0) timer += LOOPTIME + FLYERTIME;
   if (timer < FLYERTIME) {
-    image(flyer, (width - FW) / 2, 0, FW, FH);
-    image(textAd, (width - TW1) / 2, FH, TW1, TH1);
+    image(flyer, (width - FW) / 2, (height - FH)/2, FW, FH);
+    // image(textAd, (width - TW1) / 2, FH, TW1, TH1);
     return;
   }
 
