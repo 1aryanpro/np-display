@@ -2,7 +2,7 @@ let pages = [];
 let timer = 0;
 let FW;
 
-const TIME_PER_PAGE = 6000;
+const TIME_PER_PAGE = 10000;
 
 function preload() {
   pages[0] = loadImage('./Page 1.png');
@@ -16,7 +16,11 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
 
 
-  FW = width;
+  if (pages[0].width / pages[0].height > width / height) {
+    FW = width;
+  } else {
+    FW = pages[0].width * height / pages[0].height;
+  }
 }
 
 function draw() {
@@ -25,7 +29,7 @@ function draw() {
 
   translate(timer / TIME_PER_PAGE * (FW + 10), 0);
   pages.forEach((page, ind) => {
-    let FH = page.height * (width / page.width);
+    let FH = page.height * (FW / page.width);
     image(page, (FW + 10) * ind, (height - FH) / 2, FW, FH);
     image(page, (FW + 10) * (ind + pages.length), (height - FH) / 2, FW, FH);
   });
