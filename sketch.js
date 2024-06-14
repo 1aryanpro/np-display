@@ -37,6 +37,9 @@ function setup() {
 
 function draw() {
   background(0);
+  image(rewards, (width - FW) / 2, (height - FH)/2, FW, FH);
+  return;
+  
   timer -= deltaTime;
 
 
