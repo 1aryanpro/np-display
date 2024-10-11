@@ -2,8 +2,9 @@ let carousel, flyer, rewards, textAd;
 let origin = 0;
 let CW, CH, FW, FH, TW1, TH1, TW2, TH2;
 let timer = 0;
-let LOOPTIME = 20000, FLYERTIME = 30000;
+// let LOOPTIME = 20000, FLYERTIME = 30000;
 // let LOOPTIME = 0, FLYERTIME = 10000;
+let LOOPTIME = 0, FLYERTIME = 10000;
 
 function preload() {
   carousel = loadImage('./carousel.png');
@@ -42,9 +43,10 @@ function draw() {
 
   if (timer <= 0) timer += LOOPTIME + FLYERTIME;
   if (timer < FLYERTIME) {
-    if (timer < FLYERTIME / 2) image(flyer, (width - FW) / 2, (height - FH)/2, FW, FH);
-    else image(rewards, (width - FW) / 2, (height - FH)/2, FW, FH);
+    // if (timer < FLYERTIME / 2) image(flyer, (width - FW) / 2, (height - FH)/2, FW, FH);
+    // else image(rewards, (width - FW) / 2, (height - FH)/2, FW, FH);
     // image(textAd, (width - TW1) / 2, FH, TW1, TH1);
+    image(rewards, (width - FW) / 2, (height - FH)/2, FW, FH);
     return;
   }
 
