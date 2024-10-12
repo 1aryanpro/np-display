@@ -46,8 +46,8 @@ function draw() {
     if (timer <= 0) timer += LOOPTIME + FLYERTIME;
     if (timer < FLYERTIME) {
         background(0);
-        if (timer < FLYERTIME / 2) image(flyer, (width - FW) / 2, (height - FH) / 2, FW, FH);
-        else image(rewards, (width - FW) / 2, (height - FH) / 2, FW, FH);
+        // if (timer < FLYERTIME / 2) image(flyer, (width - FW) / 2, (height - FH) / 2, FW, FH);
+        // else image(rewards, (width - FW) / 2, (height - FH) / 2, FW, FH);
         // image(textAd, (width - TW1) / 2, FH, TW1, TH1);
         // image(rewards, (width - FW) / 2, (height - FH)/2, FW, FH);
         return;
