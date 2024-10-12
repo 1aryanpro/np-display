@@ -33,8 +33,10 @@ function setup() {
     TH2 = height * 0.3;
     TW2 = textAd.width * (TH2 / textAd.height);
 
-    CH = height - TH2;
+    CH = height;
+    // CH = height - TH2;
     CW = carousel.width * (CH / carousel.height);
+
 }
 
 function draw() {
@@ -54,7 +56,7 @@ function draw() {
     image(carousel, origin, 20, CW, CH);
     if (origin < -CW / 8) image(carousel, origin + CW, 20, CW, CH);
 
-    image(textAd, (width - TW2) / 2, height - TH2, TW2, TH2);
+    // image(textAd, (width - TW2) / 2, height - TH2, TW2, TH2);
 
     // origin -= width/700 * deltaTime/10;
     origin -= width / 700 * deltaTime / 15;
