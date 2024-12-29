@@ -46,15 +46,15 @@ function draw() {
     if (timer <= 0) timer += LOOPTIME + FLYERTIME;
     if (timer < FLYERTIME) {
         background(0);
-        // if (timer < FLYERTIME / 2) image(flyer, (width - FW) / 2, (height - FH) / 2, FW, FH);
-        // else image(rewards, (width - FW) / 2, (height - FH) / 2, FW, FH);
+        if (timer < FLYERTIME / 2) image(flyer, (width - FW) / 2, (height - FH) / 2, FW, FH);
+        else image(rewards, (width - FW) / 2, (height - FH) / 2, FW, FH);
         // image(textAd, (width - TW1) / 2, FH, TW1, TH1);
-        image(rewards, (width - FW) / 2, (height - FH)/2, FW, FH);
+        // image(rewards, (width - FW) / 2, (height - FH)/2, FW, FH);
         return;
     }
 
-    image(carousel, origin, 20, CW, CH);
-    if (origin < -CW / 8) image(carousel, origin + CW, 20, CW, CH);
+    image(carousel, origin, 0, CW, CH);
+    if (origin < -CW / 8) image(carousel, origin + CW, 0, CW, CH);
 
     // image(textAd, (width - TW2) / 2, height - TH2, TW2, TH2);
 
