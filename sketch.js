@@ -2,8 +2,8 @@ let carousel, flyer, rewards, textAd;
 let origin = 0;
 let CW, CH, FW, FH, TW1, TH1, TW2, TH2;
 let timer = 0;
-// let LOOPTIME = 20000, FLYERTIME = 30000;
-let LOOPTIME = 0, FLYERTIME = 10000;
+let LOOPTIME = 20000, FLYERTIME = 30000;
+// let LOOPTIME = 0, FLYERTIME = 10000;
 // let LOOPTIME = 30000, FLYERTIME = 0;
 
 function preload() {
